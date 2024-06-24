@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h2>Reiko's Comissions</h2>
+  <link rel="stylesheet" href="ReikosWebsite.css">
+</head>
+
+<body>
+  <header>
+      <div class="navbar">
+        <ul class="nav-links">
+          <li><a href="Main Page.html">Home</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Porfolio.html">Porfolio</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+  </header>
+  <main>
+    <section>
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="Image2.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="Image3.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="Image4.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="Image6.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="Image7.png" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+      <br>
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          if (n > slides.length) { slideIndex = 1 }
+          if (n < 1) { slideIndex = slides.length }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+        }
+      </script>
+    <section>
+    <div class="AboutMe">
+        <div class="image">
+            <img src="Image9.png">
+        </div>
+        <div class="text">
+            <h3>ABOUT ME</h3>
+            <p>I am a 3D Modeller with three years of experience that specializes in creating digital environments and character models. I am skilled in multiple software platforms, with Blender being the primary tool used for 3D Modelling. I am able to transform ideas into fully functional models that can be used for personal use. </p>
+            <p>Additionally, I am a Unity scene builder that is capable of constructing worlds that are fully functional for VRChat. Using Unity, I am able to create unique environments that are optimized and fully functional for Virtual Reality users and Desktop users. </p>
+        </div>
+    </section>
+    <section>
+      <div class="Project">
+        <div class="image2">
+          <img src="Image10.png">
+        </div>
+        <div class="text2">
+          
+            <h3>PROJECTS</h3>
+            <p>I have had the opportunity to work with a diverse range of communities and clients. I have created original characters and scenes that bring my clients ideas to life. I have created multiple environments with each having their own unique genre. This includes, fantasy, steampunk, cyberpunk, medieval and more. </p>
+            <p>Each project I create meets the demands of my clients, delivering high-quality, original content that stands out in any genre or setting. </p>
+          
+            </div>
+    </section>
+  </main>
+  <footer>
+    <em>&copy;2024 Reiko's Comissions. All rights reserved</em>
+
+  </footer>
+
+
+</body>
+
+</html>
